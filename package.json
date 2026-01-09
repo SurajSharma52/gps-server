@@ -1,29 +1,11 @@
 {
-  "name": "gps-data-server",
+  "name": "gps-server",
   "version": "1.0.0",
-  "description": "GPS Data Server with PostgreSQL and File Logging",
   "main": "gps_server.js",
   "scripts": {
-    "setup-db": "npm run create-db && npm run create-tables",
-    "create-db": "psql -U postgres -c \"CREATE DATABASE gps_tracking;\"",
-    "create-tables": "psql -U postgres -d gps_tracking -f database-schema.sql",
-    "start": "node gps_server.js",
-    "dev": "nodemon gps_server.js"
+    "start": "node gps_server.js"
   },
   "dependencies": {
-    "pg": "^8.16.3"
-  },
-  "devDependencies": {
-    "jest": "^29.5.0",
-    "nodemon": "^3.1.11"
-  },
-  "keywords": [
-    "gps",
-    "tracking",
-    "server",
-    "postgresql",
-    "iot"
-  ],
-  "author": "Your Name",
-  "license": "MIT"
+    "pg": "^8.11.0"
+  }
 }
